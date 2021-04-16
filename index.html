@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <title>Meme Generator</title>
+</head>
+
+
+<body>
+    <div class="top-half">
+        <h1>Super Awesome Cool Meme Generator</h1>
+
+        <div class="main">
+            <h3>Fill Out the Form to Generate the Coolest Memes!</h3>
+
+            <!-- URL box -->
+            <div class="textbox">
+                <form type="text" id="newForm">
+
+                    <div class="label"><label>Image Link Here:</label>
+                        <input type="url" class="imgUrl" placeholder="Paste URL Here"></div>
+
+                    <!-- Top Caption Box -->
+                    <div class="label"><label> Caption Line 1 :</label>
+                        <input type="text" class="cap1" id="cap1" placeholder="Optional" maxlength="100">
+                    </div>
+
+                    <!-- Bottom Caption Box -->
+                    <div class="label"><label> Caption Line 2 :</label>
+                        <input type="text" class="cap2" id="cap2" placeholder="Optional" maxlength="100"></div>
+
+                    <!-- Generate Meme Button -->
+                    <div>
+                        <input type="submit" value="Generate Meme" class="submitBtn">
+                    </div>
+
+                </form>
+            </div>
+            <!--Image Display Field-->
+            <div class="imgContainer">
+                <div class="image">
+
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
