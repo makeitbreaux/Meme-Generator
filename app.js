@@ -1,40 +1,50 @@
-// Selectors
-const imgUrl = document.querySelector('.imgUrl');
-const capOne = document.querySelector('.cap1');
-const capTwo = document.querySelector('.cap2');
+// Selects URL input by user
+const imgUrl = document.querySelector('#inputURL');
+
+//Selects Submit Button
 const subBtn = document.querySelector('.submitBtn');
-const imgField = document.querySelector('.image');
+
+//Selects Div Image will be displayed in
+const imgField = document.querySelector('.imgRow');
 
 
 
 // Events Listeners
 subBtn.addEventListener('click', addMeme);
-imgField.addEventListener('click', remove, false);
 
-// Functions
+
 function addMeme(event) {
     event.preventDefault();
-
+    
+    //creates div for Meme
     const memeDiv = document.createElement('div');
-    memeDiv.classList.add("meme");
+    memeDiv.classList.add("meme-img");
+    
+    //creates div for image 
+    const textAbove = document.getElementById("inputTextAbove");
+    const urlInput = document.getElementById('inputURL').value,
+        src = urlInput,
+        img = document.createElement('img');
+    img.src = src;
+    img.width = "500";
+    
+    //creates div for top caption
+    const topTextDiv = document.createElement('div');
+    topTextDiv.classList.add("topText");
+    topTextDiv.innerText = document.getElementById("inputTextAbove").value;
+    
+    //creates div for bottom caption
+    const bottomTextDiv = document.createElement('div');
+    bottomTextDiv.classList.add("botText");
+    bottomTextDiv.innerText = document.getElementById("inputTextBelow").value;
 
-
-    const newMeme = document.createElement('img');
-    newMeme.src = imgUrl.value;
-    newMeme.classList.add("textdiv");
-    memeDiv.innerText = capOne.value + "\n" + capTwo.value + "\n";
-    memeDiv.appendChild(newMeme);
-
+    //adds image, top & bottom caption to display div
     imgField.appendChild(memeDiv);
-
-    clear();
+    memeDiv.appendChild(img);
+    memeDiv.appendChild(topTextDiv);
+    memeDiv.appendChild(bottomTextDiv);
+    
+    //resets form after submission
+    newForm.reset();
 }
 
-
-function clear() {
-    document.getElementById("newForm").reset();
-}
-
-function remove(event) {
-    event.target.parentNode.remove();
-}
