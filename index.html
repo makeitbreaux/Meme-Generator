@@ -8,49 +8,68 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
     <link rel="stylesheet" href="styles.css">
     <title>Meme Generator</title>
 </head>
 
 
 <body>
-    <div class="top-half">
+    <!-- <div class="top-half">
+        <h1>Super Awesome Cool Meme Generator</h1> -->
+
+    <div class="container-lg header">
         <h1>Super Awesome Cool Meme Generator</h1>
+        <h3 style="color: black;">Fill Out the Form to Generate the Coolest Memes!</h3>
+    </div>
 
-        <div class="main">
-            <h3>Fill Out the Form to Generate the Coolest Memes!</h3>
 
-            <!-- URL box -->
-            <div class="textbox">
-                <form type="text" id="newForm">
+        <!-- FORM -->
+        <div class="formContain">
+            <form type="text" id="newForm">
 
-                    <div class="label"><label>Image Link Here:</label>
-                        <input type="url" class="imgUrl" placeholder="Paste URL Here"></div>
+                <!-- URL box -->
 
-                    <!-- Top Caption Box -->
-                    <div class="label"><label> Caption Line 1 :</label>
-                        <input type="text" class="cap1" id="cap1" placeholder="Optional" maxlength="100">
+                <div class="row mb-3">
+                    <label for="inputURL" class="col-sm-2 col-form-label">URL Here:</label>
+                    <div class="col-sm-6">
+                      <input type="url" class="form-control imgURL" id="inputURL" maxlength="100">
                     </div>
+                  </div>
 
-                    <!-- Bottom Caption Box -->
-                    <div class="label"><label> Caption Line 2 :</label>
-                        <input type="text" class="cap2" id="cap2" placeholder="Optional" maxlength="100"></div>
 
-                    <!-- Generate Meme Button -->
-                    <div>
-                        <input type="submit" value="Generate Meme" class="submitBtn">
+                <!-- Top Caption Box -->
+
+                <div class="row mb-3">
+                    <label for="inputTextAbove" class="col-sm-2 col-form-label">Top Caption:</label>
+                    <div class="col-sm-6">
+                      <input type="text" class="form-control textAbove" id="inputTextAbove" maxlength="100">
                     </div>
+                  </div>
 
-                </form>
+                <!-- Bottom Caption Box -->
+
+                <div class="row mb-3">
+                    <label for="inputTextBelow" class="col-sm-2 col-form-label">Bottom Caption:</label>
+                    <div class="col-sm-6">
+                      <input type="text" class="form-control textBelow" id="inputTextBelow" maxlength="100">
+                    </div>
+                  </div>
+
+                <!-- Generate Meme Button -->
+
+                <input type="submit" value="Generate Meme" class="submitBtn">
+            </form>
+        </div>
+
+
+
+        <!--Image Display Field-->
+        <div class="imgContainer">
+            <div class="imgRow">
+
+                
             </div>
-            <!--Image Display Field-->
-            <div class="imgContainer">
-                <div class="image">
-
-                </div>
-            </div>
-
-
         </div>
     </div>
 
