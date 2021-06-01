@@ -1,4 +1,4 @@
-h1 {
+.header {
     font-size: 2rem;
     text-align: center;
     font-family: 'Press Start 2P';
@@ -12,77 +12,73 @@ body {
 }
 
 
-.textbox {
-    position: relative;
-    top: 20%;
-    left: 20%;
-    padding: 1%;
-    display: block;
-}
 
-.imgUrl,
-.cap1,
-.cap2 {
+.imgUrl {
     font-family: 'Press Start 2P';
     font-size: 0.5rem;
 }
 
-input[text=value] .cap2 {
-    position: absolute;
-    bottom: 100px;
-}
 
 
 .submitBtn {
     font-family: 'Press Start 2P';
     font-size: 1rem;
     background-color: yellowgreen;
-    margin-top: 2%;
-    margin-right: 50%;
+    display: flex;
+    justify-content: center;
 }
 
-.main {
-    align-content: center;
+.formContain {
+    display: flex;
+    justify-content: center;
     text-align: center;
-
-}
-
-.label {
-    text-align: left;
-    margin-left: 10%;
-
-
-}
-
-.top-half {
     padding: 5%;
-}
-
-.meme {
-    font-size: 1rem;
-    color: white;
-    padding: 2% 2% 2%;
-
-    z-index: 0;
 
 }
 
-.textdiv {
-    position: relative;
-    top: 0px;
-    bottom: 0px;
-    z-index: 1;
+.meme-img {
+    display: inline-block;
+	margin: 1%;
+	width: 500px;
+	height: auto;
+	text-align: center;
+	position: relative;
+	opacity: 1;
 }
+
 
 .imgContainer {
     padding: 5% 5% 5%;
     font-size: 2rem;
+    position: relative;
 }
 
-.image {
+.imgRow {
     font-size: 2rem;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+    position: relative;
+    z-index:0;
+}
+
+.topText {
+    position: absolute;
+	top: 0;
+	z-index: 9;
+	max-height: 50%;
+    font-size: 1rem;
+    color: white;
+    padding: 2% 2% 2%;
+}
+
+.botText {
+    position: absolute;
+	bottom: 0;
+	z-index: 9;
+	max-height: 50%;
+    font-size: 1rem;
+    color: white;
+    padding: 2% 2% 2%;
 }
